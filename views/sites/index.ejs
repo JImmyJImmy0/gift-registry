@@ -3,7 +3,17 @@
 
 <section>
     <h1>Shopping Site Recommendations</h1>
-    <h2>View Peoples Most Recommended Shopping Sites Here!</h2>
+    <% if (user) { %>
+        <h2>Add a site recommendation here</h2>
+        <form action='/sites' method="POST">
+            <label>
+                Site Name:
+                <input type='text' name='name' autocomplete="off">
+            </label>
+            <button type='submit'>Add Site</button>
+        </form>
+    <% } %>
+    <h3>View Peoples Most Recommended Shopping Sites Here!</h3>
     <ul>
         <% sites.forEach(site => { %>
             <li>Sites<%= site.name %></li>
