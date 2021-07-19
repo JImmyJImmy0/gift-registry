@@ -5,6 +5,16 @@ export {
 }
 
 function index(req, res) {
-    console.log('this works')
+    Site.find({})
+    .then(sites => {
+        res.render('sites/index', {
+            sites,
+            title: "Sites"
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/sites')
+    })
 }
 
