@@ -10,7 +10,21 @@ export {
 }
 
 function update(req, res) {
-    console.log('this updates')
+    Site.findById(req.params.id)
+    .then(site => {
+        if (site.owner.equals(req.user.profile._id)) {
+            site.update(req.body, {new: true})
+            .then(() => {
+                res.redirect(`/sites/${site._id}`)
+            })
+        } else {
+            throw new Error ('Not authorized to update this site')
+        }
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect(`/sites`)
+    })
 }
 
 function edit(req, res) {
