@@ -10,7 +10,7 @@ function show(req, res) {
     Site.findById(req.params.id)
     .populate('owner')
     .then(site => {
-        res.render('/sites/show', {
+        res.render('sites/show', {
             site,
             title: 'Site Review'
         })
