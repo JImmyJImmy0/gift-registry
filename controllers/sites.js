@@ -6,6 +6,11 @@ export {
     show,
     addDescription,
     edit,
+    update,
+}
+
+function update(req, res) {
+    console.log('this updates')
 }
 
 function edit(req, res) {
