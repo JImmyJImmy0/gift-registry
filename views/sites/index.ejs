@@ -1,0 +1,14 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+    <h1>Shopping Site Recommendations</h1>
+    <h2>View Peoples Most Recommended Shopping Sites Here!</h2>
+    <ul>
+        <% sites.forEach(site => { %>
+            <li>Sites<%= site.name %></li>
+       <% }) %>
+    </ul>
+</section>
+
+<%- include('../partials/footer') %>
