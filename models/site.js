@@ -7,7 +7,7 @@ export {
 
 const siteSchema = new Schema ({
     name: String,
-    info: [infoSchema],
+    // info: [infoSchema],
     owner: {type: Schema.Types.ObjectId, 'ref': 'Profile'}
 })
 

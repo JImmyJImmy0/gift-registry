@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import * as siteCtrl from '../controllers/sites.js'
 
 export {
     router
@@ -6,4 +7,4 @@ export {
 
 const router = Router()
 
-router.get('/', )
+router.get('/', siteCtrl.index)
