@@ -3,11 +3,8 @@
 
 <section>
     <h1>A Site Review of <%= site.name %> by <%= site.owner.name %></h1>
-    <form action='/sites/<%= site._id %>' method="POST">
-        <label for='description'>Add A Description</label>
-        <input type='text' id='description' placeholder='Description' name='description' required minlength="5" maxlength="150" size='20'>
-        <button type='submit'>Add</button>
-    </form>
+    <p>Description: <%= site.description %></p>
+    <p>Link: <a href="<%= site.url %>" target='_blank'><%= site.name %></a></p>
 </section>
 
 <%- include('../partials/footer') %>

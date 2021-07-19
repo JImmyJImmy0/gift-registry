@@ -8,7 +8,18 @@ export {
 }
 
 function addDescription(req, res) {
-    console.log('added')
+    Site.findById(req.params.id)
+    .then(site => {
+        site.description.push(req.body)
+        site.save()
+        .then(() => {
+            res.redirect('/sites/show')
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/sites/show')
+    }) 
 }
 
 function show(req, res) {

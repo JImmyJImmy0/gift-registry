@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-const db = mongoose.connection
+
 
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
@@ -8,7 +8,7 @@ mongoose.connect(process.env.DATABASE_URL, {
   useFindAndModify: false,
 })
 
-
+const db = mongoose.connection
 // database connection event
 db.on('connected', function() {
   console.log(`Connected to MongoDB ${db.name} at ${db.host}:${db.port}`)
