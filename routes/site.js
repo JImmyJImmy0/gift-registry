@@ -5,3 +5,5 @@ export {
 }
 
 const router = Router()
+
+router.get('/', )
