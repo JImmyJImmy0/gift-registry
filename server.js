@@ -21,7 +21,7 @@ import('./config/passport.js')
 // require routes
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
-import { router as sitesRouter } from './routes/site.js'
+import { router as sitesRouter } from './routes/sites.js'
 
 // view engine setup
 app.set(
