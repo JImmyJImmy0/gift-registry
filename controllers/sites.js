@@ -7,7 +7,18 @@ export {
 }
 
 function show(req, res) {
-    console.log('show works')
+    Site.findById(req.params.id)
+    .populate('owner')
+    .then(site => {
+        res.render('/sites/show', {
+            site,
+            title: 'Site Review'
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/sites')
+    })
 }
 
 function create(req, res) {
