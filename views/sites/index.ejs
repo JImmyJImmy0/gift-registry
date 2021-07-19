@@ -16,7 +16,9 @@
     <h3>View Peoples Most Recommended Shopping Sites Here!</h3>
     <ul>
         <% sites.forEach(site => { %>
-            <li>Sites<%= site.name %></li>
+            <li>
+                <a href="/sites/<%= site._id %>"><%= site.name %></a>
+            </li>
        <% }) %>
     </ul>
 </section>
