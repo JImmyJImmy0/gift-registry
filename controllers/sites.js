@@ -9,7 +9,17 @@ export {
 }
 
 function edit(req, res) {
-    console.log('edit works')
+    Site.findById(req.params.id)
+    .then(site => {
+        res.render('sites/edit', {
+            site,
+            title: 'Edit Description'
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/sites')
+    })
 }
 
 function addDescription(req, res) {
