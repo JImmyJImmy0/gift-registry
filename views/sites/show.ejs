@@ -5,6 +5,11 @@
     <h1>A Site Review of <%= site.name %> by <%= site.owner.name %></h1>
     <p>Description: <%= site.description %></p>
     <p>Link: <a href="<%= site.url %>" target='_blank'><%= site.name %></a></p>
+    <% if (site.owner.equals(user?.profile._id)) { %>
+        <p>
+            <a class='link' href='/sites/<%= site._id %>/edit'>Edit Your Description</a>
+        </p>
+    <% } %>
 </section>
 
 <%- include('../partials/footer') %>
