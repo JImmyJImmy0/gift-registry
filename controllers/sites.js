@@ -5,6 +5,11 @@ export {
     create,
     show,
     addDescription,
+    edit,
+}
+
+function edit(req, res) {
+    console.log('edit works')
 }
 
 function addDescription(req, res) {
