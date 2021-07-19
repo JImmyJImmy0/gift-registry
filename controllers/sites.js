@@ -4,6 +4,11 @@ export {
     index,
     create,
     show,
+    addDescription,
+}
+
+function addDescription(req, res) {
+    console.log('added')
 }
 
 function show(req, res) {
