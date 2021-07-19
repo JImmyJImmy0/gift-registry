@@ -1,0 +1,22 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+    <h1>Edit Your Description Here</h1>
+    <form action='/sites/<%= site._id %>?_method=PUT' method='POST'>
+        <label>
+            Website Name:
+            <input type='text' name='name' value='<%= site.name %>' autocomplete='off'>
+        </label>
+        <label>
+            Website Description:
+            <input type='text' name='description' value='<%= site.description %>'>
+        </label>
+        <label>
+            Website Link:
+            <input type='url' name='url' placeholder='<%= site.url %>' pattern='https://.*'>
+        </label>
+    </form>
+</section>
+
+<%- include('../partials/footer') %>
