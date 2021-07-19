@@ -9,4 +9,5 @@ export {
 const router = Router()
 
 router.get('/', sitesCtrl.index)
+router.get('/:id', sitesCtrl.show)
 router.post('/', isLoggedIn, sitesCtrl.create)

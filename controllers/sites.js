@@ -3,6 +3,11 @@ import { Site } from "../models/site.js";
 export {
     index,
     create,
+    show,
+}
+
+function show(req, res) {
+    console.log('show works')
 }
 
 function create(req, res) {
