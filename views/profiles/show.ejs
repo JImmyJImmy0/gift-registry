@@ -12,6 +12,28 @@
         </div>
     <% } %>
     <h1><%= profile.name %>'s Wish List</h1>
+    <% if (isSelf) { %>
+        <h2>Add a gift here</h2>
+        <form action='/profiles/<%= profile._id %>/list' method='POST'>
+            <label>
+                Gift Name:
+                <input type='text' name='name' autocomplete='off'>
+            </label>
+            <label>
+                Price:
+                <input type='number' name='price'>
+            </label>
+            <label>
+                Priority:
+                <input type='range' name='priority' min='1' max='5'>
+            </label>
+            <label>
+                Link:
+                <input type='url' name='url' placeholder='https://example.com' pattern='https://.*'>
+            </label>
+            <button type='submit'>Add Gift!</button>
+        </form>
+    <% } %>
 </main>
 
 <%- include('../partials/footer') %>
