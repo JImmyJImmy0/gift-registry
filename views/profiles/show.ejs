@@ -14,7 +14,7 @@
     <h1><%= profile.name %>'s Wish List</h1>
     <% if (isSelf) { %>
         <h2>Add a gift here</h2>
-        <form action='/profiles/<%= profile._id %>/list' method='POST'>
+        <form action='/profiles/<%= profile._id %>/gifts' method='POST'>
             <label>
                 Gift Name:
                 <input type='text' name='name' autocomplete='off'>

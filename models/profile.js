@@ -4,7 +4,7 @@ export {
   Profile
 }
 
-const listSchema = new mongoose.Schema({
+const giftSchema = new mongoose.Schema({
   name: String,
   price: Number,
   // image: Image,
@@ -16,7 +16,7 @@ const listSchema = new mongoose.Schema({
 const profileSchema = new mongoose.Schema({
   name: String,
   avatar: String,
-  list: [listSchema]
+  gifts: [giftSchema]
 }, {
   timestamps: true
 })
