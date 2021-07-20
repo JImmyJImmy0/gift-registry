@@ -38,8 +38,7 @@
         <h2>Here are <%= isSelf ? 'your' : `${profile.name}'s` %> gifts</h2>
         <% profile.gifts.forEach(gift => { %>
             <h3>
-                <%= gift.name %>
-                <button type='button'>Details</button>
+                <a href='/gifts/<%= gift.id %>'><%= gift.name %></a>
             </h3>
         <% }) %>
     <% } else { %>
