@@ -11,7 +11,21 @@ export {
 }
 
 function deleteSite(req, res) {
-    console.log('delete works')
+    Site.findById(req.params.id)
+    .then(site => {
+        if (site.owner.equals(req.user.profile._id)) {
+            site.delete()
+            .then(() => {
+                res.redirect('/sites')
+            })
+        } else {
+            throw new Error ('Not authorized to delete this site')
+        }
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/sites')
+    })
 }
 
 function update(req, res) {
