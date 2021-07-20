@@ -9,6 +9,11 @@
         <p>
             <a class='link' href='/sites/<%= site._id %>/edit'>Edit Your Description</a>
         </p>
+        <p>
+            <form action='/sites/<%= site._id %>?_method=DELETE' method='post'>
+                <button type='submit'>Delete This Site</button>
+            </form>
+        </p>
     <% } %>
 </section>
 
