@@ -34,6 +34,19 @@
             <button type='submit'>Add Gift!</button>
         </form>
     <% } %>
+    <% if (profile.gifts.length) { %>
+        <h2>Here are <%= isSelf ? 'your' : `${profile.name}'s` %> gifts</h2>
+        <% profile.gifts.forEach(gift => { %>
+            <h3>
+                <%= gift.name %>
+                <button type='button'>Details</button>
+            </h3>
+        <% }) %>
+    <% } else { %>
+        <h2>
+            <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any gift yet
+        </h2>
+    <% } %>
 </main>
 
 <%- include('../partials/footer') %>
