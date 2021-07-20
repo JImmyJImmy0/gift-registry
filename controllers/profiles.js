@@ -5,5 +5,15 @@ export {
 }
 
 function index(req, res) {
-    console.log('works')
+    Profile.find({})
+    .then(profiles => {
+        res.render('profiles/index', {
+            profiles,
+            title: 'Profiles'
+        }) 
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect(`/profiles/${req.user.profile}`)
+    })
 }
