@@ -7,6 +7,11 @@ export {
     addDescription,
     edit,
     update,
+    deleteSite as delete,
+}
+
+function deleteSite(req, res) {
+    console.log('delete works')
 }
 
 function update(req, res) {
