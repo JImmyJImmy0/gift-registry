@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import { isLoggedIn } from '../middleware/middleware.js'
 
 export {
     router
@@ -6,3 +7,4 @@ export {
 
 const router = Router()
 
+router.get('/', isLoggedIn, )
