@@ -3,6 +3,11 @@ import { Profile } from '../models/profile.js'
 export {
     index,
     show,
+    createGift,
+}
+
+function createGift(req, res) {
+    console.log('this works')
 }
 
 function show(req, res) {
