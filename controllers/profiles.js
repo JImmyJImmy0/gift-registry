@@ -7,7 +7,18 @@ export {
 }
 
 function createGift(req, res) {
-    console.log('this works')
+    Profile.findById(req.user.profile._id)
+    .then(profile => {
+        profile.gifts.push(req.body)
+        profile.save()
+        .then(() => {
+            res.redirect(`/profiles/${req.user.profile._id}`)
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect(`/profiles/${req.user.profile}`)
+    })
 }
 
 function show(req, res) {
