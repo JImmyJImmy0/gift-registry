@@ -8,6 +8,7 @@
 
 .siwg-link {
   display: inline-block;
+  justify-content: right;
 }
 
 .siwg:focus,
