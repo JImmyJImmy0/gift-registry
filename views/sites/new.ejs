@@ -3,6 +3,21 @@
 
 <body>
     <h1>Website Recommendation</h1>
+    <form action='/sites' method='POST'>
+        <label>
+            Website Name:
+            <input type='text' name='name' autocomplete='off'>
+        </label>
+        <label>
+            Add A Description:
+            <input type='text' name='description' autocomplete='off'>
+        </label>
+        <label>
+            Add the Link:
+            <input type='url', name='url' placeholder='https://example.com' pattern='https://.*'>
+        </label>
+        <button type='submit'>Add Site</button>
+    </form>
 </body>
 
 <%- include('../partials/footer') %>

@@ -5,22 +5,6 @@
     <h1>Shopping Site Recommendations</h1>
     <% if (user) { %>
         <h2>Add a site recommendation <a href='sites/new'>here</a></h2>
-        <form action='/sites' method="POST">
-            <label>
-                Site Name:
-                <input type='text' name='name' autocomplete="off">
-                <!-- add stars and link here -->
-            </label>
-            <label>
-                Add A Description
-                <input type='text' name='description' autocomplete="off">
-            </label>
-            <label>
-                Add The Link
-                <input type='url' name='url' placeholder='https://example.com' pattern='https://.*'>
-            </label>
-            <button type='submit'>Add Site</button>
-        </form>
     <% } %>
     <h3>View Peoples Most Recommended Shopping Sites Here!</h3>
     <ul>
