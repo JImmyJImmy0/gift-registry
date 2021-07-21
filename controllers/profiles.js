@@ -5,6 +5,11 @@ export {
     show,
     createGift,
     showGift,
+    deleteGift as delete,
+}
+
+function deleteGift(req, res) {
+    console.log('i work')
 }
 
 function showGift(req, res) {
