@@ -19,7 +19,11 @@
         Link: <a href="<%= gift.url %>" target='_blank'><%= gift.name %></a>
     </p>
     <% if (profile._id.equals(user?.profile._id)) { %>
-        <p>hello</p>
+        <p>
+            <form action='/profiles/<%= profile._id %>/<%= gift._id %>?_method=DELETE' method='post'>
+                <button type='submit'>Delete</button>
+            </form>
+        </p>
     <% } %>
 </section>
 
