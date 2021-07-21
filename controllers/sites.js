@@ -8,6 +8,13 @@ export {
     edit,
     update,
     deleteSite as delete,
+    newSite as new,
+}
+
+function newSite(req, res) {
+    res.render('sites/new', {
+        title: 'Add Site'
+    })
 }
 
 function deleteSite(req, res) {
