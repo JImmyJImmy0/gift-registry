@@ -9,7 +9,22 @@ export {
 }
 
 function deleteGift(req, res) {
-    console.log('i work')
+    Profile.findById(req.user.profile)
+    .then(profile => {
+        if (profile._id.equals(req.user.profile._id)) {
+            profile.gifts.remove({_id: req.params.giftId})
+            profile.save()
+            .then(() => {
+                res.redirect(`/profiles/${req.user.profile._id}`)
+            })
+        } else {
+            throw new Error ('You are not authorized to delete this gift')
+        }
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect(`/profiles/${req.user.profile}`)
+    })
 }
 
 function showGift(req, res) {
