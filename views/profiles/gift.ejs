@@ -1,0 +1,44 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+    <h1>Details for <%= gift.name %></h1>
+    <h3>
+        Price:<br />
+        $<%= gift.price %>
+    </h3>
+    <p>
+       Notes:<br />
+       <%= gift.note %>
+    </p>
+    <p>
+        Priority:<br />
+        <%= gift.priority %>/5
+    </p>
+    <p>
+        Link: <a href="<%= gift.url %>" target='_blank'><%= gift.name %></a>
+    </p>
+</section>
+
+<%- include('../partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- NEW AND SHOW MIGHT HAVE TO BE SWITCHED FOR GIFTS -->

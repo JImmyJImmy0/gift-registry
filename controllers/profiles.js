@@ -4,12 +4,29 @@ export {
     index,
     show,
     createGift,
+    showGift,
+}
+
+function showGift(req, res) {
+    Profile.findById(req.params.profileId)
+    .then(profile => {
+        const gift = profile.gifts.id(req.params.giftId)
+        res.render('profiles/gift', {
+            gift,
+            profile,
+            title: 'Gift'
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect(`/profiles/${req.user.profile}`)
+    })
 }
 
 function createGift(req, res) {
     Profile.findById(req.user.profile._id)
     .then(profile => {
-        profile.gifts.push(req.body)
+        profile.gifts.unshift(req.body)
         profile.save()
         .then(() => {
             res.redirect(`/profiles/${req.user.profile._id}`)

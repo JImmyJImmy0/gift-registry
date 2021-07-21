@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import * as sitesCtrl from '../controllers/sites.js'
 import { isLoggedIn } from '../middleware/middleware.js'
-import { Site } from '../models/site.js'
+
 
 export {
     router

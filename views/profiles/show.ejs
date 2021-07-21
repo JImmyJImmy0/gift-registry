@@ -21,7 +21,11 @@
             </label>
             <label>
                 Price:
-                <input type='number' name='price'>
+                <input type='number' name='price' step='0.01'>
+            </label>
+            <label>
+                Notes:
+                <input type='text' name='note' autocomplete='off'>
             </label>
             <label>
                 Priority:
@@ -38,7 +42,7 @@
         <h2>Here are <%= isSelf ? 'your' : `${profile.name}'s` %> gifts</h2>
         <% profile.gifts.forEach(gift => { %>
             <h3>
-                <a href='/gifts/<%= gift.id %>'><%= gift.name %></a>
+                <a href='/profiles/<%= profile._id %>/<%= gift._id %>'><%= gift.name %></a>
             </h3>
         <% }) %>
     <% } else { %>
