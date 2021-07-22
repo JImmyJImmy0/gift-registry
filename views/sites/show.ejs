@@ -1,17 +1,18 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/sites/show.css">
 <%- include('../partials/nav') %>
 
 <section>
     <h1>A Site Review of <%= site.name %> by <%= site.owner.name %></h1>
-    <p>Description: <%= site.description %></p>
-    <p>Link: <a href="<%= site.url %>" target='_blank'><%= site.name %></a></p>
+    <p>Description:<br><div id='description'><%= site.description %></div></p>
+    <div id=link-container><p>Link:<br><a href="<%= site.url %>" target='_blank'><%= site.name %></a></p></div>
     <% if (site.owner.equals(user?.profile._id)) { %>
         <p>
-            <a class='link' href='/sites/<%= site._id %>/edit'>Edit Your Description</a>
+            <a class='btn btn-primary' href='/sites/<%= site._id %>/edit' role='button' id='edit-btn'>Edit Your Description</a>
         </p>
         <p>
             <form action='/sites/<%= site._id %>?_method=DELETE' method='post'>
-                <button type='submit'>Delete This Site</button>
+                <button type='submit' class='btn btn-secondary btn-large' id='delete-btn'>Delete This Site</button>
             </form>
         </p>
     <% } %>
