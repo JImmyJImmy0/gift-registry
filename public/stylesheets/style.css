@@ -108,6 +108,7 @@ main {
 
 #link-container {
   display: inline-flex;
+  width: 100vw;
 }
 
 #profile-container {
@@ -121,7 +122,8 @@ main {
   height: 250px;
   border-radius: 50%;
   background-color: white;
-  margin-left: 60px;
+  margin-left: auto;
+  margin-right: 200px;
 }
 
 #sites-container {
@@ -135,7 +137,8 @@ main {
   height: 250px;
   border-radius: 50%;
   background-color: white;
-  margin-right: 60px;
+  margin-right: auto;
+  margin-left: 200px;
 }
 
 h2 {
