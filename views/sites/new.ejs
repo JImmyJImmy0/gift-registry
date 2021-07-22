@@ -1,23 +1,36 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/sites/new.css">
 <%- include('../partials/nav') %>
 
-<body>
+<section>
     <h1>Website Recommendation</h1>
     <form action='/sites' method='POST'>
-        <label>
-            Website Name:
-            <input type='text' name='name' autocomplete='off'>
-        </label>
-        <label>
-            Add A Description:
-            <input type='text' name='description' autocomplete='off'>
-        </label>
-        <label>
-            Add the Link:
-            <input type='url', name='url' placeholder='https://example.com' pattern='https://.*'>
-        </label>
-        <button type='submit'>Add Site</button>
+        <p>
+            <label>
+                Website Name:
+                <br />
+                <input type='text' name='name' autocomplete='off' size='40'>
+            </label>
+        </p>
+        <p>
+            <label>
+                Add A Description:
+                <br />
+                <textarea name='description' rows='5' cols='50'></textarea>
+            </label>
+        </p>
+        <p>
+            <label>
+                Add the Link:
+                <br />
+                <input type='url', name='url' placeholder='https://example.com' pattern='https://.*' size='35'>
+            </label>
+        </p>
+        <br />
+        <p>
+            <button type='submit'>Add Site</button>
+        </p>
     </form>
-</body>
+</section>
 
 <%- include('../partials/footer') %>
