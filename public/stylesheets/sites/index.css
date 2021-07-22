@@ -1,0 +1,24 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+#sites-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+li {
+    margin: 30px;
+    background-color: white;
+    height: 70px;
+    width: 120px;
+    border-radius: 25px;
+    text-align: center;
+}
