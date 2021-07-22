@@ -3,26 +3,29 @@
 <%- include('../partials/nav') %>
 
 <section>
-    <h1>Details for <%= gift.name %></h1>
+    <h1>Here are some details for "<%= gift.name %>"</h1>
     <h3>
-        Price:<br />
+        Price:
         $<%= gift.price %>
     </h3>
     <p>
        Notes:<br />
-       <%= gift.note %>
+       <div id='gift-notes'><%= gift.note %></div>
     </p>
     <p>
-        Priority:<br />
+        Priority:
         <%= gift.priority %>/5
     </p>
-    <p>
-        Link: <a href="<%= gift.url %>" target='_blank'><%= gift.name %></a>
-    </p>
+    <div id='glink-container'>
+        <p>
+            Link:<br />
+            <a href="<%= gift.url %>" target='_blank'><%= gift.name %></a>
+        </p>
+    </div>
     <% if (profile._id.equals(user?.profile._id)) { %>
         <p>
             <form action='/profiles/<%= profile._id %>/<%= gift._id %>?_method=DELETE' method='post'>
-                <button type='submit'>Delete</button>
+                <button type='submit' class='btn btn-primary' id='dlt-btn'>Delete</button>
             </form>
         </p>
     <% } %>
