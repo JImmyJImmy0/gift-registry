@@ -15,6 +15,7 @@
     <h1><%= profile.name %>'s Wish List</h1>
     <% if (profile.gifts.length) { %>
         <h2>Here are <%= isSelf ? 'your' : `${profile.name}'s` %> gifts!</h2>
+        <h4>Click on a gift to check out some details</h4>
         <% profile.gifts.forEach(gift => { %>
             <div class='gift-link'>
                 <a href='/profiles/<%= profile._id %>/<%= gift._id %>'><%= gift.name %></a>
