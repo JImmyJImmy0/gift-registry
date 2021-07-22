@@ -2,20 +2,12 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img 
-        src="<%= user.profile.avatar %>" 
-        alt="<%= user.profile.name %> avatar"
-      >
-    </div>
-  <% } %>
-  <div id='sites-link'>
-    <a href="/sites">Sites</a>
+  <div id='sites-container'>
+    <a href="/sites"><i class="fas fa-store-alt"></i></a>
   </div>
-  <div>
-    <a href="/profiles">Profiles</a>
+  <h1 id='home-title'>Welcome to ....</h1>
+  <div id='profile-container'>
+    <a href="/profiles"><i class="fas fa-users"></i></a>
   </div>
 </main>
 

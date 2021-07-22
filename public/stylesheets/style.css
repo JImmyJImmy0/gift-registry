@@ -55,11 +55,38 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
 }
 
-h1 {
-  font-size: 3.6rem;
+#home-title {
+  font-size: 5.6rem;
+  align-self: flex-start;
+}
+
+#profile-container {
+  display: flex;
+  font-size: 42px;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  /* margin-left: 60px; */
+}
+
+#sites-container {
+  display: flex;
+  font-size: 42px;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  /* margin-right: 60px; */
 }
 
 h2 {
