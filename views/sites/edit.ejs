@@ -1,22 +1,34 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/sites/edit.css">
 <%- include('../partials/nav') %>
 
-<section>
-    <h1>Edit Your Description Here</h1>
+<section id='edit-section'>
+    <h1 id='edit-title'>Edit Your Description Here</h1>
     <form action='/sites/<%= site._id %>?_method=PUT' method='POST'>
-        <label>
-            Website Name:
-            <input type='text' name='name' value='<%= site.name %>' autocomplete='off'>
-        </label>
-        <label>
-            Website Description:
-            <input type='text' name='description' value='<%= site.description %>'>
-        </label>
-        <label>
-            Website Link:
-            <input type='url' name='url' placeholder='<%= site.url %>' pattern='https://.*'>
-        </label>
-        <button type='submit'>Done</button>
+        <p class='site-edit'>
+            <label>
+                Edit Site Name:
+                <br />
+                <input type='text' name='name' value='<%= site.name %>' autocomplete='off' size='40' maxlength='15' class='input'>
+            </label>
+        </p>
+        <p class='site-edit'>
+            <label>
+                Edit Description:
+                <br />
+                <textarea name='description' rows='5' cols='50' maxlength='150' class='input'></textarea>
+            </label>
+        </p>
+        <p class='site-edit'>
+            <label>
+                Edit Link:
+                <br />
+                <input type='url' name='url' placeholder='<%= site.url %>' pattern='https://.*' size='35' class='input'>
+            </label>
+        </p>
+        <p class='site-edit'>
+            <button type='submit' class='btn btn secondary btn-large' id='done-btn'>Done</button>
+        </p>
     </form>
 </section>
 

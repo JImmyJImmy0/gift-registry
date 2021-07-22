@@ -1,0 +1,31 @@
+#edit-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#edit-title {
+    font-size: 36px;
+}
+
+p.site-edit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.input {
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+#done-btn {
+    font-size: 24px;
+    color: black;
+    background-color: blueviolet;
+    height: 50px;
+    width: 150px;
+    border: 3px solid black;
+    border-radius: 4px;
+}
