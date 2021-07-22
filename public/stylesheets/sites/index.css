@@ -20,5 +20,11 @@ li {
     height: 70px;
     width: 120px;
     border-radius: 25px;
-    text-align: center;
+}
+
+li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
 }
