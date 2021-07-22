@@ -1,9 +1,10 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/profiles/show.css">
 <%- include('../partials/nav') %>
 
 <main>
     <% if (profile.avatar) { %>
-        <div>
+        <div id='avatar-container'>
             <img
                 class='profile-avatar'
                 src='<%= profile.avatar %>'
@@ -12,44 +13,43 @@
         </div>
     <% } %>
     <h1><%= profile.name %>'s Wish List</h1>
-    <% if (isSelf) { %>
-        <h2>Add a gift to your registry here</h2>
-        <form action='/profiles/<%= profile._id %>/gifts' method='POST'>
-            <label>
-                Gift Name:
-                <input type='text' name='name' autocomplete='off'>
-            </label>
-            <label>
-                Price:
-                <input type='number' name='price' step='0.01'>
-            </label>
-            <label>
-                Notes:
-                <input type='text' name='note' autocomplete='off'>
-            </label>
-            <label>
-                Priority:
-                <input type='range' name='priority' min='1' max='5'>
-            </label>
-            <label>
-                Link:
-                <input type='url' name='url' placeholder='https://example.com' pattern='https://.*'>
-            </label>
-            <button type='submit'>Add Gift!</button>
-        </form>
-    <% } %>
     <% if (profile.gifts.length) { %>
-        <h2>Here are <%= isSelf ? 'your' : `${profile.name}'s` %> gifts</h2>
+        <h2>Here are <%= isSelf ? 'your' : `${profile.name}'s` %> gifts!</h2>
         <% profile.gifts.forEach(gift => { %>
-            <h3>
+            <div class='gift-link'>
                 <a href='/profiles/<%= profile._id %>/<%= gift._id %>'><%= gift.name %></a>
-            </h3>
+            </div>
         <% }) %>
     <% } else { %>
         <h2>
             <%= isSelf ? "You don't" : `${profile.name} doesn't` %> have any gift yet
         </h2>
     <% } %>
+    <div id='gift-form'>
+        <% if (isSelf) { %>
+            <h2>Add a gift to your catalog</h2>
+            <form action='/profiles/<%= profile._id %>/gifts' method='POST'>
+                <label>
+                    <input type='text' name='name' placeholder='Gift Name:' autocomplete='off' size='30' maxlength='30'>
+                </label>
+                <label>
+                    <input type='number' name='price' placeholder='Price:' step='0.01'>
+                </label>
+                <label>
+                    <textarea name='note' placeholder='Notes:' rows='3' cols='50' maxlength='150'></textarea>
+                </label>
+                <label>
+                    Priority:
+                    <input type='range' name='priority' min='1' max='5'>
+                </label>
+                <label>
+                    Link:
+                    <input type='url' name='url' placeholder='https://example.com' pattern='https://.*'>
+                </label>
+                <button type='submit' class='btn btn-primary'id='add-gift'>Add Gift!</button>
+            </form>
+        <% } %>
+    </div>
 </main>
 
 <%- include('../partials/footer') %>
