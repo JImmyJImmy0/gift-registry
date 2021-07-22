@@ -27,14 +27,27 @@ body {
 
 nav {
   background-color: white;
+  height: 70px;
   font-size: 1.6rem;
   display: flex;
-  /* justify-content: center; */
 }
 
 #home-link {
+  margin: 1rem 3rem;
+  text-decoration: none;
+  font-size: 2.4rem;
   display: flex;
   justify-content: left;
+} 
+
+#login {
+  margin: 1rem 3rem;
+  text-decoration: none;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: right;
+  position: absolute;
+  right: 10px;
 }
 
 main {
@@ -74,15 +87,6 @@ section {
 
 a {
   color: #00B7FF;
-}
-
-nav > a {
-  margin: 1rem 3rem;
-  text-decoration: none;
-  font-size: 2.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: right;
 }
 
 .link {
