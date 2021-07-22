@@ -5,14 +5,19 @@ section {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 48px;
+    font-family: 'Eczar', serif;
 }
 
 p {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 50px;
+    margin: 30px;
+}
+
+label {
+    font-family: 'Eczar', serif;
 }
 
 input {
@@ -23,13 +28,20 @@ input {
 textarea {
     border: 3px solid black;
     border-radius: 4px;
+    font-family: 'Eczar', serif;
 }
 
 #add-btn {
+    font-family: 'Eczar', serif;
     font-size: 24px;
-    color: black;
+    background-color: #3F818D;
+    color: white;
     height: 50px;
     width: 150px;
-    border: 3px solid black;
+    border: 3px solid white;
     border-radius: 4px;
+}
+
+#add-btn:hover{
+    text-decoration: underline;
 }
