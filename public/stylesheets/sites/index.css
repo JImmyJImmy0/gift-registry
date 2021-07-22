@@ -6,7 +6,26 @@ section {
 }
 
 h1 {
+    color: #46454A;
     font-size: 48px;
+    font-family: 'Eczar', serif;
+}
+
+h2 {
+    color: #46454A;
+    font-family: 'Eczar', serif;
+    margin-top: 10px;
+}
+
+h2 > a {
+    color: black;
+}
+
+h3 {
+    color: #46454A;
+    font-size: 36px;
+    margin-top: 70px;
+    font-family: 'Eczar', serif;
 }
 
 #sites-list {
@@ -16,9 +35,11 @@ h1 {
 
 li {
     margin: 30px;
-    background-color: white;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 42%, rgba(63,129,141,1) 64%, rgba(0,212,255,1) 71%);
     height: 70px;
     width: 120px;
+    border: 3px solid #3F818D;
     border-radius: 25px;
 }
 
@@ -26,5 +47,13 @@ li > a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 18px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Eczar', serif;
+    font-size: 18px;
+}
+
+li > a:hover {
+    color: #4EC16E;
 }
