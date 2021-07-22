@@ -63,6 +63,11 @@ main {
 #home-title {
   font-size: 5.6rem;
   align-self: flex-start;
+  text-align: center;
+  width: 750px;
+  height: 70px;
+  border-radius: 100px / 50px;
+  background-color: white;
 }
 
 #profile-container {
