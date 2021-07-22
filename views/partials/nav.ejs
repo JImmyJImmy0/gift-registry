@@ -7,7 +7,7 @@
   <a href='/' id='home-link'> <i class="fas fa-home fa-2x"></i></a>
   <div id='login'> 
     <% if (user) { %>
-      <a href="/auth/logout">Logout</a>
+      <a class='btn btn-primary' href="/auth/logout" role='button' id='logout-btn'>Logout</a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
