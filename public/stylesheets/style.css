@@ -38,6 +38,7 @@ nav {
   font-size: 2.4rem;
   display: flex;
   justify-content: left;
+  size: 40px;
 } 
 
 #login {
