@@ -1,0 +1,31 @@
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.card {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.card-img-top {
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.card-body {
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-top: 3px;
+    padding: 3px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 24px;
+    
+}
+
+.col {
+    margin: 10px;
+}
