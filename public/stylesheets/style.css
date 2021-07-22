@@ -64,10 +64,6 @@ main {
   font-size: 5.6rem;
   align-self: flex-start;
   text-align: center;
-  width: 750px;
-  height: 70px;
-  border-radius: 100px / 50px;
-  background-color: white;
 }
 
 #profile-container {
@@ -81,7 +77,7 @@ main {
   height: 250px;
   border-radius: 50%;
   background-color: white;
-  /* margin-left: 60px; */
+  margin-left: 60px;
 }
 
 #sites-container {
@@ -95,7 +91,7 @@ main {
   height: 250px;
   border-radius: 50%;
   background-color: white;
-  /* margin-right: 60px; */
+  margin-right: 60px;
 }
 
 h2 {
