@@ -6,6 +6,18 @@
 
 h1 {
     font-size: 48px;
+    font-family: 'Eczar', serif;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: 'Eczar', serif;
+}
+
+h4 {
+    font-size: 16px;
+    font-family: 'Eczar', serif;
 }
 
 .gift-link {
@@ -14,12 +26,22 @@ h1 {
     width: 450px;
     height: 37px;
     margin: 4px;
-    border: 3px solid black;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 28%, rgba(0,212,255,1) 66%, rgba(63,129,141,1) 80%, rgba(48,45,89,1) 91%);
+    border: 2px solid black;
     border-radius: 5px;
 }
 
 .gift-link > a{
+    color: #00BBE0;
     font-size: 20px;
+    font-family: 'Eczar', serif;
+    text-decoration: none;
+}
+
+.gift-link:hover {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 #gift-form {
@@ -40,18 +62,30 @@ form {
     flex-direction: column;
 }
 
+label {
+    font-size: 20px;
+    font-family: 'Eczar', serif;
+}
+
 input, textarea {
     margin: 5px;
     border: 3px solid black;
     border-radius: 4px;
+    font-family: 'Eczar', serif;
 }
 
 #add-gift {
-    color: black;
-    font-size: 18px;;
-    border: 3px solid black;
-    border-radius: 4px;
+    font-family: 'Eczar', serif;
+    font-size: 24px;
+    background-color: #3F818D;
+    color: white;
     height: 50px;
-    width: 100px;
-    margin-top: 10px;
+    width: 150px;
+    border: 3px solid white;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+#add-gift:hover {
+    text-decoration: underline;
 }
