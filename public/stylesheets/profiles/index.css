@@ -1,6 +1,12 @@
+main {
+    background-color: #64BEB2;
+}
+
 h1 {
-    font-size: 36px;
+    font-size: 48px;
     text-align: center;
+    margin-top: 20px;
+    font-family: 'Eczar', serif;
 }
 
 .card {
@@ -14,6 +20,7 @@ h1 {
 }
 
 .card-body {
+    background-color: white;
     border: 3px solid black;
     border-radius: 20px;
     margin-top: 3px;
@@ -21,8 +28,11 @@ h1 {
 }
 
 .card-title {
+    color: black;
     text-align: center;
     font-size: 24px;
+    font-family: 'Eczar', serif;
+    margin-top: 5px;
     
 }
 
