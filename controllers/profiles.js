@@ -91,3 +91,4 @@ function index(req, res) {
         res.redirect(`/profiles/${req.user.profile}`)
     })
 }
+// hi
