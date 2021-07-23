@@ -19,7 +19,7 @@
     <div id='glink-container'>
         <p>
             Link:<br />
-            <a href="<%= gift.url %>" target='_blank'><%= gift.name %></a>
+            <a href="<%= gift.url %>" id='glink' target='_blank'><%= gift.name %></a>
         </p>
     </div>
     <% if (profile._id.equals(user?.profile._id)) { %>

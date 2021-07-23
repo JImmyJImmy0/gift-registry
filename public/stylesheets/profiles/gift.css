@@ -7,17 +7,20 @@ section {
 h1 {
     font-size: 48px;
     margin-bottom: 50px;
+    font-family: 'Eczar', serif;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 30px;
+    font-family: 'Eczar', serif;
 }
 
 p {
     font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
+    font-family: 'Eczar', serif;
 }
 
 #glink-container {
@@ -25,10 +28,23 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background: rgb(0,212,255);
+    background: radial-gradient(circle, rgba(0,212,255,1) 42%, rgba(63,129,141,1) 70%, rgba(2,0,36,1) 100%);
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    border: 3px solid black;
+    padding-top: 5px;
+    font-family: 'Eczar', serif;
+}
+
+#glink {
+    color: #206F53;
+    font-size: 24px;
+}
+
+#glink:hover {
+    color: white;
 }
 
 #gift-notes {
@@ -38,14 +54,24 @@ p {
     height: 100px;
     background-color: white;
     border-radius: 25px;
+    border: 2px solid black;
+    font-family: 'Eczar', serif;
 }
 
 #dlt-btn {
     color: black;
     font-size: 18px;
     text-align: center;
-    width: 125px;
-    height: 50px;
+    width: 175px;
+    height: 35px;
+    background-color: #FF7070;
     border: 3px solid black;
     border-radius: 15px;
+    font-family: 'Eczar', serif;
+    padding-top: 2px;
+}
+
+#dlt-btn:hover {
+    text-decoration: underline;
+    font-weight: bold;
 }
