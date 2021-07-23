@@ -6,13 +6,13 @@ section {
 }
 
 h1 {
-    color: #46454A;
+    color: black;
     font-size: 48px;
     font-family: 'Eczar', serif;
 }
 
 h2 {
-    color: #46454A;
+    color: black;
     font-family: 'Eczar', serif;
     margin-top: 10px;
 }
@@ -22,7 +22,7 @@ h2 > a {
 }
 
 h3 {
-    color: #46454A;
+    color: black;
     font-size: 36px;
     margin-top: 70px;
     font-family: 'Eczar', serif;
