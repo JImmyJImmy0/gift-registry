@@ -23,7 +23,6 @@ import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as sitesRouter } from './routes/sites.js'
 import { router as profilesRouter } from './routes/profiles.js'
-// gift router????
 
 // view engine setup
 app.set(
@@ -67,7 +66,6 @@ app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/sites', sitesRouter)
 app.use('/profiles', profilesRouter)
-// gifts router????
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

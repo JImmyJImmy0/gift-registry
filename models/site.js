@@ -9,11 +9,6 @@ export {
 const siteSchema = new Schema ({
     name: String,
     description: String,
-    // rating: {
-    //     type: Number,
-    //     min: 1,
-    //     max: 5,
-    // },
     url: String,
     owner: {type: Schema.Types.ObjectId, 'ref': 'Profile'}
 })

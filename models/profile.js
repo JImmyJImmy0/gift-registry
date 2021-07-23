@@ -7,7 +7,6 @@ export {
 const giftSchema = new mongoose.Schema({
   name: String,
   price: Number,
-  // image: Image,
   note: String,
   priority: Number,
   url: String, 
