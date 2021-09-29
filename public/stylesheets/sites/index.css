@@ -35,11 +35,10 @@ h3 {
 
 li {
     margin: 30px;
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 42%, rgba(63,129,141,1) 64%, rgba(0,212,255,1) 71%);
+    background: #376474;
     height: 70px;
     width: 120px;
-    border: 3px solid #3F818D;
+    border: 3px solid #00BBE0;
     border-radius: 25px;
 }
 
@@ -48,12 +47,14 @@ li > a {
     align-items: center;
     justify-content: center;
     padding-top: 18px;
-    color: white;
+    color: #00BBE0;
     text-decoration: none;
     font-family: 'Eczar', serif;
     font-size: 18px;
 }
 
 li > a:hover {
-    color: #4EC16E;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #9CE2FC;
 }
