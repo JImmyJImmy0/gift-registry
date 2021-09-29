@@ -31,13 +31,13 @@
             <h2>Add a gift to your catalog</h2>
             <form action='/profiles/<%= profile._id %>/gifts' method='POST'>
                 <label>
-                    <input type='text' name='name' placeholder='Gift Name:' autocomplete='off' size='30' maxlength='30'>
+                    <input type='text' name='name' placeholder=' Gift Name:' autocomplete='off' size='30' maxlength='30'>
                 </label>
                 <label>
-                    <input type='number' name='price' placeholder='Price:' step='0.01'>
+                    <input type='number' name='price' placeholder=' Price:' step='0.01'>
                 </label>
                 <label>
-                    <textarea name='note' placeholder='Notes:' rows='3' cols='45' maxlength='150'></textarea>
+                    <textarea name='note' placeholder=' Notes:' rows='3' cols='45' maxlength='150'></textarea>
                 </label>
                 <label>
                     Priority:
@@ -45,7 +45,7 @@
                 </label>
                 <label>
                     Link:
-                    <input type='url' name='url' placeholder='https://example.com' pattern='https://.*'>
+                    <input type='url' name='url' placeholder=' https://example.com' pattern='https://.*'>
                 </label>
                 <button type='submit' class='btn btn-primary'id='add-gift'>Add Gift!</button>
             </form>

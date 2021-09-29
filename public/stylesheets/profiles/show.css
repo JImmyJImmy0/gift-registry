@@ -24,24 +24,24 @@ h4 {
     text-align: center;
     background-color: white;
     width: 450px;
-    height: 37px;
+    height: 36px;
     margin: 4px;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 28%, rgba(0,212,255,1) 66%, rgba(63,129,141,1) 80%, rgba(48,45,89,1) 91%);
+    background: #376474;
     border: 2px solid black;
     border-radius: 5px;
 }
 
 .gift-link > a{
     color: #00BBE0;
-    font-size: 20px;
+    font-size: 24px;
     font-family: 'Eczar', serif;
     text-decoration: none;
 }
 
-.gift-link:hover {
+.gift-link > a:hover {
     text-decoration: underline;
     font-weight: bold;
+    color: #9CE2FC;
 }
 
 #gift-form {
