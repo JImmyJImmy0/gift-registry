@@ -30,11 +30,13 @@ p {
 }
 
 #link {
-    color: #206F53;
+    color: #2d3f62;
+    text-decoration: none;
 }
 
 #link:hover{
     color: white;
+    text-decoration: underline;
 }
 
 #description {
